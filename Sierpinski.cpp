@@ -2,7 +2,7 @@
 #include <math.h>   // for floor()
 #include <cstdlib>  // for rand()
 
-#define CELL_CHAR   "*"
+#define CELL_CHAR   "^"
 #define SCALE       60
 #define RED_PAIR    1
 
@@ -50,16 +50,16 @@ int main()
 {
     initscr();
     
-    start_color();
-    init_pair(RED_PAIR, COLOR_RED, COLOR_BLACK);
+//     start_color();
+//     init_pair(RED_PAIR, COLOR_RED, COLOR_BLACK);
  
     Sierpinski(100000);
     
-    attron(COLOR_PAIR(RED_PAIR) );
-    placePoint(point1[0], point1[1]);
-    placePoint(point2[0], point2[1]);
-    placePoint(point3[0], point3[1]);
-    attroff(COLOR_PAIR(RED_PAIR) );
+//     attron(COLOR_PAIR(RED_PAIR) );
+//     placePoint(point1[0], point1[1]);
+//     placePoint(point2[0], point2[1]);
+//     placePoint(point3[0], point3[1]);
+//     attroff(COLOR_PAIR(RED_PAIR) );
 
     refresh();
     getch();
