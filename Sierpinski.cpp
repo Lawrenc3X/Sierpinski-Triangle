@@ -2,8 +2,8 @@
 #include <math.h>   // for floor()
 #include <cstdlib>  // for rand()
 
-#define CELL_CHAR   "^"
-#define SCALE       60
+#define CELL_CHAR   ACS_PLUS
+#define SCALE       636
 #define RED_PAIR    1
 
 float position[2] = {0.5, 1};
@@ -20,7 +20,7 @@ void placePoint(float  x, float y)
     int window_y = floor(y * SCALE);
 
     move(window_y, window_x);
-    printw(CELL_CHAR);
+    addch(CELL_CHAR);
 }
 
 void Sierpinski(int iterations)
@@ -53,7 +53,7 @@ int main()
 //     start_color();
 //     init_pair(RED_PAIR, COLOR_RED, COLOR_BLACK);
  
-    Sierpinski(100000);
+    Sierpinski(1000000);
     
 //     attron(COLOR_PAIR(RED_PAIR) );
 //     placePoint(point1[0], point1[1]);

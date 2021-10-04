@@ -1,7 +1,7 @@
 CC = gcc
 CXX = g++
-CFLAGS = -g -lncurses
-CXXFLAGS = -g -lncurses
+CFLAGS = -lncurses
+CXXFLAGS = -lncurses
 
 Sierpinski: Sierpinski.cpp
 	$(CXX) $(CXXFLAGS) -o Sierpinski Sierpinski.cpp
